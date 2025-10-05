@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+      "origin": {"type": "string"},
+      "destination": {"type": "string"},
+      "flight_date": {"type": "string"},
+      "adults": {"type": "number"},
+      "flight_status": {"type": "string"},
+      "flight_price": {"type": "number"},
+      "selection_reason": {"type": "string"}
+    },
+    "required": ["origin", "destination", "flight_date", "flight_price"]
+  }
+  

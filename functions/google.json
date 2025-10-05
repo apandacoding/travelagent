@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Google Flights Search Params",
+    "type": "object",
+    "properties": {
+      "engine": { "const": "google_flights" },
+      "departure_id": {
+        "type": "string",
+        "pattern": "^[A-Z]{3}$",
+        "description": "IATA origin (e.g., LAX)"
+      },
+      "arrival_id": {
+        "type": "string",
+        "pattern": "^[A-Z]{3}$",
+        "description": "IATA destination (e.g., BCN)"
+      },
+      "outbound_date": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+      },
+      "return_date": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+      },
+      "currency": { "type": "string", "enum": ["USD"] },
+      "hl": { "type": "string", "enum": ["en"] },
+      "gl": { "type": "string", "enum": ["us"] },
+      "api_key": { "type": "string", "enum": ["4a871fe30bb1fed4dc0850f01d384a2fff2dee8a74046b902109785f1a9bd730"]}
+    },
+    "required": [
+      "engine",
+      "departure_id",
+      "arrival_id",
+      "outbound_date",
+      "return_date",
+      "currency",
+      "hl",
+      "gl",
+      "api_key"
+    ],
+    "additionalProperties": false
+  }
+  
